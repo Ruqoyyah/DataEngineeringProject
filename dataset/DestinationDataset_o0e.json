@@ -2,7 +2,7 @@
 	"name": "DestinationDataset_o0e",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureDataLakeStorage5",
+			"referenceName": "AzureDataLakeStorage1",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
