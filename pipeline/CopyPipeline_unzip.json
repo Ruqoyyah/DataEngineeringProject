@@ -37,21 +37,20 @@
 					"sink": {
 						"type": "BinarySink",
 						"storeSettings": {
-							"type": "AzureBlobFSWriteSettings",
-							"copyBehavior": "FlattenHierarchy"
+							"type": "AzureBlobFSWriteSettings"
 						}
 					},
 					"enableStaging": false
 				},
 				"inputs": [
 					{
-						"referenceName": "SourceDataset_n4p",
+						"referenceName": "Binary1",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "DestinationDataset_n4p",
+						"referenceName": "Binary2",
 						"type": "DatasetReference"
 					}
 				]
