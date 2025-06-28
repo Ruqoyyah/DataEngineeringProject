@@ -1,0 +1,20 @@
+{
+	"name": "DestinationDataset_n4p",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage3",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "silver"
+			},
+			"compression": {
+				"type": "deflate"
+			}
+		}
+	}
+}
