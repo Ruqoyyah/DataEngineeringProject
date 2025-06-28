@@ -28,14 +28,12 @@
 						"type": "BinarySource",
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
-							"recursive": true,
-							"wildcardFileName": "*"
+							"recursive": true
 						},
 						"formatSettings": {
 							"type": "BinaryReadSettings",
 							"compressionProperties": {
-								"type": "ZipDeflateReadSettings",
-								"preserveZipFileNameAsFolder": false
+								"type": "ZipDeflateReadSettings"
 							}
 						}
 					},
@@ -50,7 +48,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SourceDataset_o0e",
+						"referenceName": "Binary3",
 						"type": "DatasetReference"
 					}
 				],
