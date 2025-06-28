@@ -1,0 +1,9 @@
+{
+	"name": "df-project8",
+	"location": "centralus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "096d0f6a-7af2-4906-89e8-e2af20df967b",
+		"tenantId": "d8ec72b9-19d5-4aaa-a5c3-651205a91d5e"
+	}
+}

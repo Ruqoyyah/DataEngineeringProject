@@ -1,0 +1,51 @@
+{
+	"name": "ls_AzureSynapseAnalyticsTable04",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_AzureSynapseAnalytics03",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "Rank",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Country Code",
+				"type": "varchar"
+			},
+			{
+				"name": "Gold Medal",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Silver Medal",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Bronze Medal",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Total",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Country",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "medals_total"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,17 @@
+{
+	"name": "ls_AzureSqlDatabase02",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "svr-project.database.windows.net",
+			"database": "db-project8",
+			"encrypt": "optional",
+			"trustServerCertificate": true,
+			"authenticationType": "SQL",
+			"userName": "adminuser",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEU4RDNENUJDLTE5RjItNDNGNy05MDc2LTJBMDNFRjE0OEYzM185OWFjOTFjNi1jNDQ0LTQ1YWEtYjQ4ZS04MjA3MGQzNzZmODgiDQp9"
+		}
+	}
+}
