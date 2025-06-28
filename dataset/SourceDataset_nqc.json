@@ -14,7 +14,7 @@
 				"fileSystem": "bronze"
 			},
 			"compression": {
-				"type": "ZipDeflate"
+				"type": "gzip"
 			}
 		}
 	}
