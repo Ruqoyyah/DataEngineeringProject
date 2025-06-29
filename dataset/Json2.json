@@ -1,0 +1,47 @@
+{
+	"name": "Json2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "00816cd4-0d98-4505-8b8f-8b3ba08aab31.json",
+				"folderPath": "Azure-Data-Factory-datasets.zip/Azure-Data-Factory-by-Example-Second-Edition-main/SampleData/HandyCandy",
+				"fileSystem": "silver"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"TransactionId": {
+					"type": "string"
+				},
+				"TransactionDate": {
+					"type": "string"
+				},
+				"StoreId": {
+					"type": "string"
+				},
+				"Items": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"Product": {
+								"type": "string"
+							},
+							"Price": {
+								"type": "number"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
