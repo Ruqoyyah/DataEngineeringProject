@@ -11,7 +11,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "@concat('salesFile_',substring(utcNow(),5,2),'.csv')",
+					"value": "@concat('salesFile_',substring(utcNow(),0,4),'.csv')",
 					"type": "Expression"
 				},
 				"fileSystem": "staging"
