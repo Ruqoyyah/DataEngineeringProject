@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Lookup_csv').output",
+						"value": "@activity('Lookup_GET_Tables').output",
 						"type": "Expression"
 					},
 					"activities": [
