@@ -109,7 +109,8 @@
 					"dataset": {
 						"referenceName": "AzureSqlTable_lookup",
 						"type": "DatasetReference"
-					}
+					},
+					"firstRowOnly": false
 				}
 			}
 		],
