@@ -108,7 +108,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"TableName": {
-											"value": "@replace(item().name,'.csv','')",
+											"value": "@replace(concat('Sales_',item().name),'.csv','')",
 											"type": "Expression"
 										}
 									}
