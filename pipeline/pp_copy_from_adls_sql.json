@@ -1,6 +1,22 @@
 {
 	"name": "pp_copy_from_adls_sql",
 	"properties": {
+		"activities": [
+			{
+				"name": "Validation1",
+				"type": "Validation",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "DelimitedText1",
+						"type": "DatasetReference"
+					},
+					"timeout": "0.1:00:00",
+					"sleep": 10
+				}
+			}
+		],
 		"annotations": []
 	}
 }
