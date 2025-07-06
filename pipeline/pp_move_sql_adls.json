@@ -5,7 +5,14 @@
 			{
 				"name": "ForEach_sql_csv",
 				"type": "ForEach",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Lookup_GET_Tables",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
@@ -81,7 +88,7 @@
 				}
 			},
 			{
-				"name": "Lookup_csv",
+				"name": "Lookup_GET_Tables",
 				"type": "Lookup",
 				"dependsOn": [],
 				"policy": {
@@ -95,11 +102,12 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
+						"sqlReaderQuery": "SELECT \n  TABLE_NAME AS TableName,\n  CONCAT(LOWER(TABLE_NAME), '/') AS TargetFolder\nFROM INFORMATION_SCHEMA.TABLES\nWHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_SCHEMA = 'dbo';\n",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
 					"dataset": {
-						"referenceName": "ds_AzureSqlTable_copy_from_sql",
+						"referenceName": "AzureSqlTable_lookup",
 						"type": "DatasetReference"
 					}
 				}
