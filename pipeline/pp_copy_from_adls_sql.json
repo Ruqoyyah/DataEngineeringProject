@@ -32,7 +32,7 @@
 				}
 			},
 			{
-				"name": "ForEach_candysharkfile",
+				"name": "ForEach_candyshark_file",
 				"type": "ForEach",
 				"dependsOn": [],
 				"userProperties": []
