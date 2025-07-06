@@ -19,6 +19,7 @@
 						"value": "@activity('Lookup_GET_Tables').output.value",
 						"type": "Expression"
 					},
+					"isSequential": true,
 					"activities": [
 						{
 							"name": "Copy_from_sql_adls",
@@ -73,14 +74,8 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "ds_csv_from_sql",
-									"type": "DatasetReference",
-									"parameters": {
-										"TargetFolder": {
-											"value": "@item().TargetFolder",
-											"type": "Expression"
-										}
-									}
+									"referenceName": "ds_csv_sql_new",
+									"type": "DatasetReference"
 								}
 							]
 						}
