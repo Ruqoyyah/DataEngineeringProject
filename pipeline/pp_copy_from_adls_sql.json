@@ -1,0 +1,6 @@
+{
+	"name": "pp_copy_from_adls_sql",
+	"properties": {
+		"annotations": []
+	}
+}
