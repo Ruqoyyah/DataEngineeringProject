@@ -3,17 +3,36 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Validation1",
-				"type": "Validation",
+				"name": "Get Metadata_for_candyshark",
+				"type": "GetMetadata",
 				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "DelimitedText1",
+						"referenceName": "ds_candyshark",
 						"type": "DatasetReference"
 					},
-					"timeout": "0.1:00:00",
-					"sleep": 10
+					"fieldList": [
+						"childItems",
+						"exists",
+						"itemName",
+						"itemType",
+						"lastModified"
+					],
+					"storeSettings": {
+						"type": "AzureBlobFSReadSettings",
+						"enablePartitionDiscovery": false
+					},
+					"formatSettings": {
+						"type": "DelimitedTextReadSettings"
+					}
 				}
 			}
 		],
