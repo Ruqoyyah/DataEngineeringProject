@@ -20,11 +20,7 @@
 						"type": "DatasetReference"
 					},
 					"fieldList": [
-						"childItems",
-						"exists",
-						"itemName",
-						"itemType",
-						"lastModified"
+						"childItems"
 					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
@@ -34,6 +30,12 @@
 						"type": "DelimitedTextReadSettings"
 					}
 				}
+			},
+			{
+				"name": "ForEach_candysharkfile",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": []
 			}
 		],
 		"annotations": []
