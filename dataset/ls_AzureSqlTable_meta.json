@@ -1,0 +1,17 @@
+{
+	"name": "ls_AzureSqlTable_meta",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_AzureSqlDatabase_meta",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"TableName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}
