@@ -6,7 +6,7 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"tablename": {
+			"filename": {
 				"type": "string"
 			}
 		},
@@ -15,7 +15,7 @@
 		"schema": [],
 		"typeProperties": {
 			"table": {
-				"value": "@dataset().tablename",
+				"value": "@dataset().filename",
 				"type": "Expression"
 			}
 		}
