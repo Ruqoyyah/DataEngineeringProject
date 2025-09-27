@@ -26,14 +26,9 @@
 						}
 					},
 					"sink": {
-						"type": "ParquetSink",
-						"storeSettings": {
-							"type": "AzureBlobFSWriteSettings",
-							"copyBehavior": "MergeFiles"
-						},
-						"formatSettings": {
-							"type": "ParquetWriteSettings"
-						}
+						"type": "AzureSqlSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false
 					},
 					"enableStaging": false
 				},
@@ -45,7 +40,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_Parquet1_adls",
+						"referenceName": "AzureSqlTable1",
 						"type": "DatasetReference"
 					}
 				]
