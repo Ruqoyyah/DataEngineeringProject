@@ -22,7 +22,7 @@
 						"partitionOption": "None"
 					},
 					"dataset": {
-						"referenceName": "AzureSqlTable1",
+						"referenceName": "AzureSqlTable_sql",
 						"type": "DatasetReference"
 					},
 					"firstRowOnly": false
@@ -61,10 +61,6 @@
 							"typeProperties": {
 								"source": {
 									"type": "AzureSqlSource",
-									"sqlReaderQuery": {
-										"value": "@item().TABLE_NAME",
-										"type": "Expression"
-									},
 									"queryTimeout": "02:00:00",
 									"partitionOption": "None"
 								},
@@ -90,7 +86,13 @@
 							"inputs": [
 								{
 									"referenceName": "AzureSqlTable1",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"tablename": {
+											"value": "@item().TABLE_NAME",
+											"type": "Expression"
+										}
+									}
 								}
 							],
 							"outputs": [
@@ -99,7 +101,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"filename": {
-											"value": "@item().filename",
+											"value": "@item().TABLE_NAME",
 											"type": "Expression"
 										}
 									}
